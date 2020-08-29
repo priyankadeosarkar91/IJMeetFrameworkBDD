@@ -116,7 +116,6 @@
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-junit</artifactId>
 			<version>5.5.0</version>
-			<!-- <scope>test</scope> -->
 		</dependency>
 
 		<dependency>

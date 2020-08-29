@@ -32,7 +32,7 @@ public class AccessUtilityFile {
 
 		try {
 			fis = new FileInputStream(
-					"C:\\Eclipse-WorkSpace\\eclipse-workspace\\com.ijmeet\\src\\main\\resources\\ObjectRepository.properties");
+					"C:\\Eclipse-WorkSpace\\eclipse-workspace\\IJMeetFrameworkBDD\\src\\main\\resources\\ObjectRepository.properties");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -87,11 +87,11 @@ public class AccessUtilityFile {
 	 * @DataProvider(name="ReadDataFromExcel")
 	 */
 
-	public Object[][] readExcelFile() throws IOException {
+	public Object[][] readExcelFile(String filepath) throws IOException {
 		Object[][] obj = null;
 		try {
 			// Here, provide appropriate excel file path from where fetch the data
-			FileInputStream fis = new FileInputStream("src\\main\\resources\\ReadExcelData.xlsx");
+			FileInputStream fis = new FileInputStream(filepath);
 			XSSFWorkbook getBook = new XSSFWorkbook(fis);
 
 			// Here, provide the sheet-Name where actual data is to be read
@@ -142,11 +142,11 @@ public class AccessUtilityFile {
 	 */
 
 	//public static JSONArray topics;
-	public static String readJSONfile(String topicname) {
+	public static String readJSONfile(String topicname, String filepath) {
 		
 		JSONParser parser = new JSONParser();
 		try {
-			Object unitObj = parser.parse(new FileReader("src\\main\\resources\\ReadJSONData.json"));
+			Object unitObj = parser.parse(new FileReader(filepath));
 			JSONObject jObject = (JSONObject) unitObj;
 			JSONArray jArray = (JSONArray) jObject.get(topicname);
 			System.out.println(jArray);

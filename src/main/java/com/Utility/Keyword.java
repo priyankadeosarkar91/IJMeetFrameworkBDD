@@ -7,6 +7,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import javax.imageio.ImageIO;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -20,12 +22,16 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import ru.yandex.qatools.ashot.AShot;
+import ru.yandex.qatools.ashot.Screenshot;
+import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
 public class Keyword {
 
 
 
 	/*
+	 * @author:Govind Rudrawar
 	 * This method will launch the given Browser
 	 * 
 	 */
@@ -50,7 +56,8 @@ public class Keyword {
 		}
 
 		Constants.edriver = new EventFiringWebDriver(Constants.driver);
-		Constants.eventlistener = new WebEventListener();
+		Constants.eventlistener=new WebEventListener();
+		
 		Constants.edriver.register(Constants.eventlistener);
 		Constants.driver = Constants.edriver;
 	}
@@ -327,12 +334,12 @@ public class Keyword {
 	 * This method will capture the screenshot for the entire web-page by
 	 * parsing it
 	 * 
-	 * @Param:Accepts int value as parameter i.e. the time in milliseconds for
+	 * @Param:Accepts integer value as parameter i.e. the time in milliseconds for
 	 * which the web-page will be parsed
 	 * 
 	 * @Param:Accepts parameter as the type of Image we want i.e. JPG or PNG
 	 * 
-	 * @Param:Accepts paramter as the location where we need to save the image
+	 * @Param:Accepts parameter as the location where we need to save the image
 	 * output stream
 	 */
 	public static void captureFullScreenshot(int timeinMiliseconds, String formatName, FileOutputStream filepath)
@@ -417,9 +424,9 @@ public class Keyword {
 	}
 
 	/**
-	 * This method will scroll the window till end of webpage.
+	 * This method will scroll the window till end of web-page.
 	 * 
-	 * @author chirde sampada
+	 * @author Chirde Sampada
 	 * @param
 	 */
 	public static void scrollWebPageBottom() {
@@ -430,7 +437,7 @@ public class Keyword {
 	/**
 	 * This method will scroll the window till VisibleElement of webpage.
 	 * 
-	 * @author chirde sampada
+	 * @author: Chirde Sampada
 	 * @param WebElement
 	 */
 	public static void scrollByVisibleElement(WebElement element) {
