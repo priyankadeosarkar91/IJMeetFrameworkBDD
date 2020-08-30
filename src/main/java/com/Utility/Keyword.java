@@ -30,7 +30,7 @@ public class Keyword {
 
 
 
-	/*
+	/**
 	 * @author:Govind Rudrawar
 	 * This method will launch the given Browser
 	 * 
@@ -80,6 +80,14 @@ public class Keyword {
 
 		Constants.driver.manage().window().maximize();
 	}
+	/*
+	 *This method will click on the whichever WebElement is passes as an argument  
+	 * 
+	 */
+	public static void clickOnElement(WebElement element) {
+		
+		element.click();
+	}
 
 	/*
 	 * This method will delete all the cookies i.e. the password, the id for all
@@ -101,6 +109,10 @@ public class Keyword {
 		Constants.action = new Actions(Constants.driver);
 		Constants.action.moveToElement(element).build().perform();
 
+	}
+	public static String getCurrentUrl() {
+		String s=Constants.driver.getCurrentUrl();
+		return s;
 	}
 
 	/*
@@ -557,7 +569,12 @@ public class Keyword {
 			return false;
 		}
 	}
-
+	/*
+	 * This method will perform the right click action of the mouse
+	 */
+	public static void rightClick() {
+		Constants.action.contextClick();
+	}
 	/*
 	 * This method will refresh the page whenever needed.
 	 */

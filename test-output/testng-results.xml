@@ -2,15 +2,15 @@
 <testng-results skipped="0" failed="0" ignored="0" total="0" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1255" started-at="2020-08-29T03:42:27Z" finished-at="2020-08-29T03:42:28Z">
+  <suite name="Default suite" duration-ms="925" started-at="2020-08-30T20:32:54Z" finished-at="2020-08-30T20:32:55Z">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:RunnerUtility.RunnerClass@6f1fba17]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:RunnerUtility.RunnerClass@71318ec4]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="1255" started-at="2020-08-29T03:42:27Z" finished-at="2020-08-29T03:42:28Z">
+    <test name="Default test" duration-ms="925" started-at="2020-08-30T20:32:54Z" finished-at="2020-08-30T20:32:55Z">
       <class name="RunnerUtility.RunnerClass">
-        <test-method status="FAIL" signature="setUpClass()[pri:0, instance:RunnerUtility.RunnerClass@6f1fba17]" name="setUpClass" is-config="true" duration-ms="984" started-at="2020-08-29T03:42:27Z" finished-at="2020-08-29T03:42:28Z">
+        <test-method status="FAIL" signature="setUpClass()[pri:0, instance:RunnerUtility.RunnerClass@71318ec4]" name="setUpClass" is-config="true" duration-ms="708" started-at="2020-08-30T20:32:54Z" finished-at="2020-08-30T20:32:55Z">
           <exception class="io.cucumber.core.exception.CucumberException">
             <message>
               <![CDATA[Couldn't load plugin class: com.cucumber.listener.ExtentCucumberFormatter]]>
@@ -79,7 +79,7 @@ at java.lang.ClassLoader.loadClass(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:RunnerUtility.RunnerClass@6f1fba17]" name="tearDownClass" is-config="true" duration-ms="1" started-at="2020-08-29T03:42:28Z" finished-at="2020-08-29T03:42:28Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:RunnerUtility.RunnerClass@71318ec4]" name="tearDownClass" is-config="true" duration-ms="0" started-at="2020-08-30T20:32:55Z" finished-at="2020-08-30T20:32:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

@@ -48,6 +48,35 @@ public class AccessUtilityFile {
 		return value;
 
 	}
+	/**
+	 * This method will fetch you the locator type and locator value saved in the String[]
+	 * @param key
+	 * @return:String[]
+	 */
+	public static String[] getLocator(String key) {
+		String[] s=null;
+
+		try {
+			fis = new FileInputStream(
+					"C:\\Eclipse-WorkSpace\\eclipse-workspace\\IJMeetFrameworkBDD\\src\\main\\resources\\ObjectRepository.properties");
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		p = new Properties();
+		try {
+			p.load(fis);
+			
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		value = p.getProperty(key);
+		s=value.split("**");
+		return s;
+
+	}
 	/*This is an additional method for accessing any .property file 
 	 * @Param:It accepts argument as String file-path where the file is stored
 	 * @param:It accepts argument as key for which we want to get the value which we have stored in the Object repository 
@@ -176,4 +205,5 @@ public class AccessUtilityFile {
 		}
 		sc.close();
 	}
+	
 }
