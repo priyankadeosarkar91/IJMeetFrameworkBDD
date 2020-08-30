@@ -53,30 +53,27 @@ public class AccessUtilityFile {
 	 * @param key
 	 * @return:String[]
 	 */
-	public static String[] getLocator(String key) {
-		String[] s=null;
-
+	public static String[] getLocator(String key ) {
+		String[] parts =null;
 		try {
-			fis = new FileInputStream(
+			FileInputStream fis = new FileInputStream(
 					"C:\\Eclipse-WorkSpace\\eclipse-workspace\\IJMeetFrameworkBDD\\src\\main\\resources\\ObjectRepository.properties");
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Properties prop = new Properties();
+			prop.load(fis);
+			String values = prop.getProperty(key);
+			parts=values.split("&&");
 		}
-		p = new Properties();
-		try {
-			p.load(fis);
-			
-			
+		catch (FileNotFoundException e) {
+			System.out.println("Could not locate the file");
+			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			System.out.println("Could not fetch the data from the file ");
 			e.printStackTrace();
 		}
-		value = p.getProperty(key);
-		s=value.split("**");
-		return s;
-
+		return parts;
 	}
+	
+
 	/*This is an additional method for accessing any .property file 
 	 * @Param:It accepts argument as String file-path where the file is stored
 	 * @param:It accepts argument as key for which we want to get the value which we have stored in the Object repository 

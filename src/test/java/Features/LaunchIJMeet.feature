@@ -8,7 +8,7 @@ Feature: Launching the IJMeet Application on the Chrome Browser and print the li
     And The user clicks on the SignIn button on the Home-page
     Then A new web-page will open
     When The user clicks on the SignInWithGoogle button on the newly opened page
-    And The user selects and clicks on the first option of the list for users already registered on the device
+    And The user enters valid credentials and clicks on enter
     And User Clicks on the button for Quick Meeting
     Then The application is launched successfully
     And The Modal Pop Up is displayed on which is given the link for the session created

@@ -4,6 +4,7 @@ import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import com.Utility.AccessUtilityFile;
@@ -32,12 +33,13 @@ public class LaunchIJMeetStepDefinition {
 		Keyword.maximizeWindow();
 		homepageUrl=Keyword.getCurrentUrl();
 		
-		throw new io.cucumber.java.PendingException();
+		//throw new io.cucumber.java.PendingException();
 	}
 	@And ("The user clicks on the SignIn button on the Home-page")
 	public void the_user_clicks_on_the_SignIn_button_on_the_Home_page() {
-	    Keyword.clickOnElement(Keyword.getWebElement(AccessUtilityFile.getLocator("SignInButton")[0], AccessUtilityFile.getLocator("SignInButton")[1]));
-	    throw new io.cucumber.java.PendingException();
+	    WebElement element=Keyword.getWebElement(AccessUtilityFile.getLocator("SignInButton")[0], AccessUtilityFile.getLocator("SignInButton")[1]);
+		Keyword.clickOnElement(element);
+	    //throw new io.cucumber.java.PendingException();
 	}
 
 	@Then("A new web-page will open")
@@ -45,43 +47,43 @@ public class LaunchIJMeetStepDefinition {
 	    loginPageUrl=Keyword.getCurrentUrl();
 	    boolean result=loginPageUrl.equalsIgnoreCase(homepageUrl);
 	    Assert.assertFalse(result);
-	    throw new io.cucumber.java.PendingException();
+	    //throw new io.cucumber.java.PendingException();
 	}
 
 	@When("The user clicks on the SignInWithGoogle button on the newly opened page")
 	public void the_user_clicks_on_the_SignInWithGoogle_button_on_the_newly_opened_page() {
 	   
 		Keyword.clickOnElement(Keyword.getWebElement(AccessUtilityFile.getLocator("SignInWithGoogle")[0], AccessUtilityFile.getLocator("SignInWithGoogle")[1]));
-	    throw new io.cucumber.java.PendingException();
+	    //throw new io.cucumber.java.PendingException();
 	}
 
-	@And ("The user selects and clicks on the first option of the list for users already registered on the device")
-	public void the_user_selects_and_clicks_on_the_first_option_of_the_list_for_users_already_registered_on_the_device() {
-	    Keyword.clickOnElement(Keyword.getWebElement(AccessUtilityFile.getLocator("GoogleAccount")[0], AccessUtilityFile.getLocator("GoogleAccount")[1]));
-	    throw new io.cucumber.java.PendingException();
+	@And ("The user enters valid credentials and clicks on enter")
+	public void the_user_enters_valid_credentials_and_clicks_on_enter() {
+	    WebElement email=Keyword.getWebElement(AccessUtilityFile.getLocator("GoogleAccount")[0], AccessUtilityFile.getLocator("GoogleAccount")[1]);
+	    email.sendKeys("govind.rudrawar@gmail.com");
+	    WebElement password =Keyword.getWebElement(AccessUtilityFile.getLocator("Password")[0], AccessUtilityFile.getLocator("Password")[1]);
+	    password.sendKeys("password123");
+	    password.click();
+	    //throw new io.cucumber.java.PendingException();
 	}
 
 	@And ("User Clicks on the button for Quick Meeting")
 	public void user_Clicks_on_the_button_for_Quick_Meeting() {
 	    Keyword.clickOnElement(Keyword.getWebElement(AccessUtilityFile.getLocator("QuickMeeting")[0], AccessUtilityFile.getLocator("QuickMeeting")[1]));
-	    throw new io.cucumber.java.PendingException();
+	    //throw new io.cucumber.java.PendingException();
 	}
-	@Then ("The Application is launched successfully")
-	public void the_Application_is_launched_successfully() {
+	@Then ("The application is launched successfully")
+	public void the_application_is_launched_successfully() {
 		Keyword.implicitWait(5);
 		String currentUrl=Keyword.getCurrentUrl();
 		Assert.assertEquals(currentUrl, "https://ijmeet.com/conf");
-		throw new io.cucumber.java.PendingException();
+		//throw new io.cucumber.java.PendingException();
 	}
 
 	@And("The Modal Pop Up is displayed on which is given the link for the session created")
 	public void the_Modal_Pop_Up_is_displayed_on_which_is_given_the_link_for_the_session_created() {
 		Keyword.ifAlert();
-		
-	    
-	    
-	    
-	    throw new io.cucumber.java.PendingException();
+		//throw new io.cucumber.java.PendingException();
 	}
 
 	@When("The user copies the link for the session created by clicking on the copy link")
@@ -99,12 +101,12 @@ public class LaunchIJMeetStepDefinition {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		throw new io.cucumber.java.PendingException();
+		//throw new io.cucumber.java.PendingException();
 	}
 	@And ("The user cancels the Modal Pop up by clicking on the cancel button on the Pop Up")
 	public void The_user_cancels_the_Modal_Pop_up_by_clicking_on_the_cancel_button_on_the_Pop_Up() {
 		Keyword.clickOnElement(Keyword.getWebElement(AccessUtilityFile.getLocator("CancelModelPopUp")[0], AccessUtilityFile.getLocator("CancelModelPopUp")[1]));
-		throw new io.cucumber.java.PendingException();
+		//throw new io.cucumber.java.PendingException();
 	}
 	
 
