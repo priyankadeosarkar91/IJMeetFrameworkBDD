@@ -53,7 +53,7 @@ public class AccessUtilityFile {
 	 * @param key
 	 * @return:String[]
 	 */
-	public static String[] getLocator(String key ) {
+	public static String[] getLocator1(String key ) {
 		String[] parts =null;
 		try {
 			FileInputStream fis = new FileInputStream(

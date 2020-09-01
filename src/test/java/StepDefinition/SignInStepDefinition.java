@@ -43,9 +43,9 @@ public class SignInStepDefinition {
 	@When("User Enter {string} and {string}")
 	public void enterUIDandPassword(String uname, String pass) {
 
-		WebElement element=Keyword.getWebElement(AccessUtilityFile.getLocator("Username")[0], AccessUtilityFile.getLocator("Username")[1]);
+		WebElement element=Keyword.getWebElement(AccessUtilityFile.getLocator1("Username")[0], AccessUtilityFile.getLocator1("Username")[1]);
 		Keyword.enterText(element,uname );
-		WebElement element1=Keyword.getWebElement(AccessUtilityFile.getLocator("Password")[0], AccessUtilityFile.getLocator("Password")[1]);
+		WebElement element1=Keyword.getWebElement(AccessUtilityFile.getLocator1("Password")[0], AccessUtilityFile.getLocator1("Password")[1]);
 		Keyword.enterText(element1,pass );
 
 	}
@@ -53,12 +53,12 @@ public class SignInStepDefinition {
 	@Then("Check user should login")
 	public void check_user_should_login() {
 		
-		Keyword.getWebElement(AccessUtilityFile.getLocator("LoginButton")[0], AccessUtilityFile.getLocator("LoginButton")[1]).click();
+		Keyword.getWebElement(AccessUtilityFile.getLocator1("LoginButton")[0], AccessUtilityFile.getLocator1("LoginButton")[1]).click();
 		if(Constants.driver.getCurrentUrl().equalsIgnoreCase(AccessUtilityFile.getProperty("DashboardURL"))) {
 			System.out.println("LOGIN SUCCESSFUL");
 		}
 		else {
-			String failMSG=Keyword.getWebElement(AccessUtilityFile.getLocator("Failmsg")[0], AccessUtilityFile.getLocator("Failmsg")[1]).getText();
+			String failMSG=Keyword.getWebElement(AccessUtilityFile.getLocator1("Failmsg")[0], AccessUtilityFile.getLocator1("Failmsg")[1]).getText();
 			System.out.println("LOGIN FAILED"+ failMSG);
 		}
 		
