@@ -12,21 +12,21 @@ public class Homepage {
 		PageFactory.initElements(Constants.driver, this);
 	}
 	@FindBy(css="a.navbar-brand.font-weight-bold.d-block>img ")
-	WebElement ijmeetLogo;
+	public WebElement ijmeetLogo;
 	
 	@FindBy(xpath="//a[text()=' Join meeting ']")
-	WebElement joinMeetingLink;
+	public WebElement joinMeetingLink;
 	
 	@FindBy(xpath="//a[text()=' Host meeting ']")
-	WebElement hostMeetingLink;
+	public WebElement hostMeetingLink;
 	
 	@FindBy (xpath="//a[text()='  Contact sales ']")
-	WebElement contactSalesLink;
+	public WebElement contactSalesLink;
 	
 	@FindBy(css=".nav-link.nav-right-cutom-bg.font-weight-bold")
-	WebElement signInButton;
+	public WebElement signInButton;
 	
 	@FindBy(xpath="//a[text()=' Sign up ']")
-	WebElement signUpButton;
+	public WebElement signUpButton;
 
 }

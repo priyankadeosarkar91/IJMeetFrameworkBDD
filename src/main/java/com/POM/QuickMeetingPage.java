@@ -14,41 +14,43 @@ public class QuickMeetingPage extends DashboardPage{
 	}
 
 	@FindBy(xpath="//div[@aria-label='Toggle screenshare']")
-	WebElement shareYourScreen;
+	public WebElement shareYourScreen;
 	
 	@FindBy(xpath="//div[@aria-label='Toggle raise hand']")
-	WebElement raiseYourHand;
+	public WebElement raiseYourHand;
 	
 	@FindBy(xpath="//div[@aria-label='Toggle chat window']")
-	WebElement opencloseChat;
+	public WebElement opencloseChat;
 	
 	@FindBy(xpath="//div[@aria-label='Toggle mute audio']")
-	WebElement muteUnmuteAudio;
+	public WebElement muteUnmuteAudio;
 	
 	@FindBy (xpath="//div[@aria-label='Leave the call']")
-	WebElement leaveCall;
+	public WebElement leaveCall;
 	
 	@FindBy(xpath="//div[@aria-label='Toggle mute video']")
-	WebElement muteVideo;
+	public WebElement muteVideo;
 	
 	@FindBy(xpath="//div[@aria-label='Toggle tile view']")
-	WebElement toggleView;
+	public WebElement toggleView;
 	
 	@FindBy(xpath="//div[@aria-label='Security options']")
-	WebElement securityOptions;
+	public WebElement securityOptions;
 	
 	@FindBy(xpath="//div[@aria-label='Toggle more actions menu']")
-	WebElement moreActions;
+	public WebElement moreActions;
 	
 	@FindBy(css="#close")
-	WebElement modalClosebutton;
+	public WebElement popUpClosebutton;
 	
 	@FindBy(css="span.meeting-id-common-pic>img")
-	WebElement copyLink;
+	public WebElement copyLinkbutton;
 	
 	@FindBy(css=".Handle-n2edb7-0.hzRJjY")
-	WebElement enableparticipantslider;
+	public WebElement enableparticipantslider;
 	
+	@FindBy(css="span#url")
+	public WebElement meetingUrl;
 	
 	
 	

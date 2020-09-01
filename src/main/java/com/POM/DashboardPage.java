@@ -6,84 +6,84 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.Utility.Constants;
 
-public class DashboardPage {
+public class DashboardPage extends EnterPasswordGooglePage {
 	
 	public DashboardPage() {
 		super();
 		PageFactory.initElements(Constants.driver, this);
 	}
 	@FindBy(xpath=" //span[text()=' Home ']")
-	WebElement homeLink;
+	public WebElement homeLink;
 	
 	@FindBy(xpath=" //span[text()=' My Account ']")
-	WebElement myAccountLink;
+	public WebElement myAccountLink;
 	
 	@FindBy(xpath=" //span[text()='  Meetings ']")
-	WebElement meetingsLink;
+	public WebElement meetingsLink;
 	
 	@FindBy(xpath=" //span[text()='  Application ']")
-	WebElement applicationLink;
+	public WebElement applicationLink;
 	
 	@FindBy(css="span.pro-icons-width>img")
-	WebElement userdetailsImage;
+	public WebElement userdetailsImage;
 	
 	@FindBy(xpath="//button[text()=' Schedule Meeting '] ")
-	WebElement scheduleMeetingButton;
+	public WebElement scheduleMeetingButton;
 	
 	@FindBy(xpath=" //button[text()='  Join meeting '] ")
-	WebElement joinMeetingButton;
+	public WebElement joinMeetingButton;
 	
 	@FindBy(xpath=" //button[text()=' Quick meeting '] ")
-	WebElement quickMeetingButton;
+	public WebElement quickMeetingButton;
 	
 
 	@FindBy (css=".col-lg-9.col-xl-6>input#edit_topic")
-	WebElement topicTextBox;
+	public WebElement topicTextBox;
 	
 	@FindBy (css=".col-lg-9.col-xl-6>#edit_description_1")
-	WebElement descriptionTextBox;
+	public WebElement descriptionTextBox;
 	
 	@FindBy (css=".multiple_emails-container")
-	WebElement meetingInviteesTextBox;
+	public WebElement meetingInviteesTextBox;
 	
 	@FindBy (css="input#edit_start_end_date")
-	WebElement dateTextBox;
+	public WebElement dateTextBox;
 	
 	@FindBy (css="div.drp-calendar.left.single>div.calendar-table>table.table-condensed>thead>tr>th.month>select.monthselect")
-	WebElement monthSelect;
+	public WebElement monthSelect;
 	
 	@FindBy (css="div.drp-calendar.left.single>div.calendar-table>table.table-condensed>thead>tr>th.month>select.yearselect")
-	WebElement yearSelect;
+	public WebElement yearSelect;
 	
 	@FindBy(css="div.drp-calendar.left.single>div.calendar-table>table.table-condensed>thead>tr>th.next.available")
-	WebElement nextAvaialbleMonth;
+	public WebElement nextAvaialbleMonth;
 	
 	@FindBy (css="div.drp-calendar.left.single>div.calendar-table>table.table-condensed>thead>tr>th.prev.available")
-	WebElement prevAvailableMonth;
+	public WebElement prevAvailableMonth;
 	
 	@FindBy (css="div>#edit_start_hour")
-	WebElement startHour;
+	public WebElement startHour;
 	
 	@FindBy(css="div>#edit_start_minute")
-	WebElement startMinute;
+	public WebElement startMinute;
 	
 	@FindBy (css="div>#start_time_zn")
-	WebElement selectAmPm;
+	public WebElement selectAmPm;
 	
 	@FindBy (css="div>#edit_hour")
-	WebElement durationHour;
+	public WebElement durationHour;
 	
 	@FindBy (css="div>#edit_minute")
-	WebElement durationMinute;
+	public WebElement durationMinute;
 	
 	@FindBy (css="div>#edit_timezone")
-	WebElement timeZone;
+	public WebElement timeZone;
 	
 	@FindBy (css="div>#submitmeeting")
-	WebElement saveChangesButton;
+	public WebElement saveChangesButton;
 	
 	@FindBy (css="#m_interval")
-	WebElement intervalTextBox;
+	public WebElement intervalTextBox;
 	
 	
 	

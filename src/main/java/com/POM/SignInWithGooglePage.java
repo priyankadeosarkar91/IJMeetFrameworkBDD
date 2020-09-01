@@ -13,13 +13,13 @@ public class SignInWithGooglePage extends SignInPage{
 	}
 	
 	@FindBy(xpath="//input[@type='email']")
-	WebElement emailIdTexbox;
+	public WebElement emailIdTexbox;
 	
 	@FindBy(xpath="//button[text()='Forgot email?']")
-	WebElement forgotEmailLink;
+	public WebElement forgotEmailLink;
 	
 	@FindBy(xpath="//button[@class='VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-k8QpJ VfPpkd-LgbsSe-OWXEXe-dgl2Hf nCP5yc AjY5Oe DuMIQc qIypjc TrZEUc']")
-	WebElement nextButton;
+	public WebElement nextButtonforGoogleEmail;
 	
 	
 }

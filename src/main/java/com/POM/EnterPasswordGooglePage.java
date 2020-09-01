@@ -12,12 +12,12 @@ public class EnterPasswordGooglePage extends SignInWithGooglePage{
 		PageFactory.initElements(Constants.driver, this);
 	}
 	@FindBy(xpath="//input[@aria-label='Enter your password']")
-	WebElement enterPassword;
+	public WebElement enterPassword;
 	
 	@FindBy(xpath="//span[text()='Forgot password?']")
-	WebElement forgotPassword;
+	public WebElement forgotPassword;
 	
 	@FindBy(xpath="//button[@class='VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-k8QpJ VfPpkd-LgbsSe-OWXEXe-dgl2Hf nCP5yc AjY5Oe DuMIQc qIypjc TrZEUc']")
-	WebElement nextButton;
+	public WebElement nextButton;
 	
 }

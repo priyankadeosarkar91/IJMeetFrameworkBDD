@@ -14,26 +14,26 @@ public class SignInPage extends Homepage {
 	}
 	
 	@FindBy(css="#email")
-	WebElement emailTextBox;
+	public WebElement emailTextBox;
 	
 	@FindBy(css="#password")
-	WebElement passwordTextBox;
+	public WebElement passwordTextBox;
 	
 	@FindBy(id="remember")
-	WebElement rememberMeRadioButton;
+	public WebElement rememberMeRadioButton;
 	
 	@FindBy(css=".auth-link.text-black")
-	WebElement forgotYourPasswordLink;
+	public WebElement forgotYourPasswordLink;
 	
 	@FindBy(css="sign-up-accounthave")
-	WebElement signUpLink;
+	public WebElement signUpLink;
 
 	@FindBy(xpath="//button[text()='  Sign In ']")
-	WebElement signInbutton;
+	public WebElement signInbutton;
 	
 	@FindBy(css=".social-login-button.social-login-button-google")
-	WebElement signInWithGoogle;
+	public WebElement signInWithGoogle;
 	
 	@FindBy(css=".social-login-button.social-login-button-facebook")
-	WebElement signInWithFacebook;
+	public WebElement signInWithFacebook;
 }
