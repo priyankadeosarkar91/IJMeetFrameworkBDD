@@ -1,8 +1,11 @@
 package StepDefinition;
 
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import com.Utility.AccessUtilityFile;
 import com.Utility.Constants;
+import com.Utility.Keyword;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -25,30 +28,40 @@ public class SignInStepDefinition {
 
 	@Before
 	public void setup() {
-		WebDriverManager.chromedriver().setup();
-		Constants.driver=new ChromeDriver();
-		Constants.driver.get("https://ijmeet.com/login");
+
+		Keyword.launchBrowser("Chrome");
+//		Keyword.launchUrl("https://ijmeet.com");
+		Keyword.launchUrl("https://ijmeet.com/login");
 		
 	}
-	@After
-	public void teardown() {
-		
-		Constants.driver.close();
-	}
+//	@After
+//	public void teardown() {
+//		
+//		Keyword.closeAllWindows();
+//	}
 
 	@When("User Enter {string} and {string}")
-	public void user_Enter_and(String string, String string2) {
+	public void enterUIDandPassword(String uname, String pass) {
 
-		// Write code here that turns the phrase above into concrete actions
-		throw new io.cucumber.java.PendingException();
+		WebElement element=Keyword.getWebElement(AccessUtilityFile.getLocator("Username")[0], AccessUtilityFile.getLocator("Username")[1]);
+		Keyword.enterText(element,uname );
+		WebElement element1=Keyword.getWebElement(AccessUtilityFile.getLocator("Password")[0], AccessUtilityFile.getLocator("Password")[1]);
+		Keyword.enterText(element1,pass );
 
 	}
 
 	@Then("Check user should login")
 	public void check_user_should_login() {
-
-		// Write code here that turns the phrase above into concrete actions
-		throw new io.cucumber.java.PendingException();
+		
+		Keyword.getWebElement(AccessUtilityFile.getLocator("LoginButton")[0], AccessUtilityFile.getLocator("LoginButton")[1]).click();
+		if(Constants.driver.getCurrentUrl().equalsIgnoreCase(AccessUtilityFile.getProperty("DashboardURL"))) {
+			System.out.println("LOGIN SUCCESSFUL");
+		}
+		else {
+			String failMSG=Keyword.getWebElement(AccessUtilityFile.getLocator("Failmsg")[0], AccessUtilityFile.getLocator("Failmsg")[1]).getText();
+			System.out.println("LOGIN FAILED"+ failMSG);
+		}
+		
 
 	}
 
