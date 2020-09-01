@@ -72,6 +72,25 @@ public class AccessUtilityFile {
 		}
 		return parts;
 	}
+	public static String[] getLocator1(String key ) {
+		String[] parts =null;
+		try {
+			FileInputStream fis = new FileInputStream(
+					"src\\main\\resources\\ObjectRepository.properties");
+			Properties prop = new Properties();
+			prop.load(fis);
+			String values = prop.getProperty(key);
+			parts=values.split("&&");
+		}
+		catch (FileNotFoundException e) {
+			System.out.println("Could not locate the file");
+			e.printStackTrace();
+		} catch (IOException e) {
+			System.out.println("Could not fetch the data from the file ");
+			e.printStackTrace();
+		}
+		return parts;
+	}
 	
 
 	/*This is an additional method for accessing any .property file 
