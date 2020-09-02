@@ -21,5 +21,15 @@ public class SignInWithGooglePage extends SignInPage{
 	@FindBy(xpath="//button[@class='VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-k8QpJ VfPpkd-LgbsSe-OWXEXe-dgl2Hf nCP5yc AjY5Oe DuMIQc qIypjc TrZEUc']")
 	public WebElement nextButtonforGoogleEmail;
 	
+	//Locators for Entering Password in googlepassword page
+	@FindBy(xpath="//input[@aria-label='Enter your password']")
+	public WebElement enterPassword;
+	
+	@FindBy(xpath="//span[text()='Forgot password?']")
+	public WebElement forgotPassword;
+	
+	@FindBy(xpath="//button[@class='VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-k8QpJ VfPpkd-LgbsSe-OWXEXe-dgl2Hf nCP5yc AjY5Oe DuMIQc qIypjc TrZEUc']")
+	public WebElement nextButton;
+	
 	
 }

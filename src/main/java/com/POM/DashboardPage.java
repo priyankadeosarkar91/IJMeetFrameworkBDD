@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.Utility.Constants;
 
-public class DashboardPage extends EnterPasswordGooglePage {
+public class DashboardPage extends SignInWithGooglePage {
 	
 	public DashboardPage() {
 		super();
@@ -36,7 +36,30 @@ public class DashboardPage extends EnterPasswordGooglePage {
 	@FindBy(xpath=" //button[text()=' Quick meeting '] ")
 	public WebElement quickMeetingButton;
 	
-
+	@FindBy (css="input#upcoming_meeting_search_key")
+	public WebElement enterSearchValueTextBox;
+	
+	@FindBy (css="div.col-sm-6.col-md-4.col-lg-3>input.form-control.start_date")
+	public WebElement enterFromDateTextBox;
+	
+	@FindBy (css="input#upcoming_meeting_end_date")
+	public WebElement enterToDateTextBox;
+	
+	@FindBy (css=".btn.btn-default.mbtn.search_value_upcoming_meeting")
+	public WebElement searchMeetingsButton;
+	
+	@FindBy(xpath="//div[@id='ZGdPbExPS0lMRk1uamZJdldTeWowUT09']/descendant::div[@class='thomasedison-project px-3']")
+	public WebElement firstLog;
+	
+	@FindBy (xpath="//div[@id='Qk9QV0hyQ3ZXSGtMaDRjODhoZlBxdz09']/descendant::div[@class='thomasedison-project px-3']")
+	public WebElement secondLog;
+	
+	@FindBy (xpath="//div[@id='c2VEVGliRE1SSE5hSnZNS3VQYXdhUT09']/descendant::div[@class='thomasedison-project px-3']")
+	public WebElement thirdLog; 
+	//(Dash-board Page we get when we click on SignIn on Home-page
+	
+	//Locators after we click on Schedule Meeting on the Dash-board Page 
+	
 	@FindBy (css=".col-lg-9.col-xl-6>input#edit_topic")
 	public WebElement topicTextBox;
 	
@@ -84,6 +107,17 @@ public class DashboardPage extends EnterPasswordGooglePage {
 	
 	@FindBy (css="#m_interval")
 	public WebElement intervalTextBox;
+	
+	@FindBy (css="input#edit_host_video")
+	public WebElement hostVideoSlider; 
+	
+	@FindBy (css="input#edit_participant_video")
+	public WebElement participantVideoSlider; 
+	
+	@FindBy (css="input#is_recurring")
+	public WebElement recurringMeetingSlider; 
+	
+	
 	
 	
 	
