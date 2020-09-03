@@ -60,6 +60,9 @@ public class DashboardPage extends SignInWithGooglePage {
 	
 	//Locators after we click on Schedule Meeting on the Dash-board Page 
 	
+	@FindBy (css="div#meetings-scheule-create>div>ul>li")
+	public WebElement newMeetFormTitle;
+	
 	@FindBy (css=".col-lg-9.col-xl-6>input#edit_topic")
 	public WebElement topicTextBox;
 	
@@ -102,21 +105,78 @@ public class DashboardPage extends SignInWithGooglePage {
 	@FindBy (css="div>#edit_timezone")
 	public WebElement timeZone;
 	
-	@FindBy (css="div>#submitmeeting")
-	public WebElement saveChangesButton;
+	@FindBy (css="input#edit_host_video")
+	public WebElement videoHostToggleButton;
+	
+	@FindBy (css="input#edit_participant_video")
+	public WebElement videoParticipantsToggleButton;
+	
+	@FindBy (css="input#is_recurring")
+	public WebElement isRecurringToggleButton;
 	
 	@FindBy (css="#m_interval")
 	public WebElement intervalTextBox;
 	
-	@FindBy (css="input#edit_host_video")
-	public WebElement hostVideoSlider; 
+	@FindBy (css="div>#submitmeeting")
+	public WebElement saveChangesButton;
 	
-	@FindBy (css="input#edit_participant_video")
-	public WebElement participantVideoSlider; 
-	
-	@FindBy (css="input#is_recurring")
-	public WebElement recurringMeetingSlider; 
-	
+//	@FindBy (css=".col-lg-9.col-xl-6>input#edit_topic")
+//	public WebElement topicTextBox;
+//	
+//	@FindBy (css=".col-lg-9.col-xl-6>#edit_description_1")
+//	public WebElement descriptionTextBox;
+//	
+//	@FindBy (css=".multiple_emails-container")
+//	public WebElement meetingInviteesTextBox;
+//	
+//	@FindBy (css="input#edit_start_end_date")
+//	public WebElement dateTextBox;
+//	
+//	@FindBy (css="div.drp-calendar.left.single>div.calendar-table>table.table-condensed>thead>tr>th.month>select.monthselect")
+//	public WebElement monthSelect;
+//	
+//	@FindBy (css="div.drp-calendar.left.single>div.calendar-table>table.table-condensed>thead>tr>th.month>select.yearselect")
+//	public WebElement yearSelect;
+//	
+//	@FindBy(css="div.drp-calendar.left.single>div.calendar-table>table.table-condensed>thead>tr>th.next.available")
+//	public WebElement nextAvaialbleMonth;
+//	
+//	@FindBy (css="div.drp-calendar.left.single>div.calendar-table>table.table-condensed>thead>tr>th.prev.available")
+//	public WebElement prevAvailableMonth;
+//	
+//	@FindBy (css="div>#edit_start_hour")
+//	public WebElement startHour;
+//	
+//	@FindBy(css="div>#edit_start_minute")
+//	public WebElement startMinute;
+//	
+//	@FindBy (css="div>#start_time_zn")
+//	public WebElement selectAmPm;
+//	
+//	@FindBy (css="div>#edit_hour")
+//	public WebElement durationHour;
+//	
+//	@FindBy (css="div>#edit_minute")
+//	public WebElement durationMinute;
+//	
+//	@FindBy (css="div>#edit_timezone")
+//	public WebElement timeZone;
+//	
+//	@FindBy (css="div>#submitmeeting")
+//	public WebElement saveChangesButton;
+//	
+//	@FindBy (css="#m_interval")
+//	public WebElement intervalTextBox;
+//	
+//	@FindBy (css="input#edit_host_video")
+//	public WebElement hostVideoSlider; 
+//	
+//	@FindBy (css="input#edit_participant_video")
+//	public WebElement participantVideoSlider; 
+//	
+//	@FindBy (css="input#is_recurring")
+//	public WebElement recurringMeetingSlider; 
+//	
 	
 	
 	
