@@ -3,23 +3,23 @@ package StepDefinition;
 import com.POM.DashboardPage;
 import com.Utility.Keyword;
 
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class ScheduleMeetingStepdefinition {
 	DashboardPage dpage;
 
-	@When("The user Clicks on the  Schedule Meeting button")
+	@Given("The user Clicks on the  Schedule Meeting button")
 	public void the_user_Clicks_on_the_Schedule_Meeting_button() {
-		Keyword.clickOnElement(dpage.scheduleMeetingButton);
+		Keyword.getWebElement(dpage.scheduleMeetingButton).click();
 	}
 
-	@Then("The application is launched successfully and the meeting schedule form is displayed")
-	public void the_application_is_launched_successfully_and_the_meeting_schedule_form_is_displayed() {
-		if((Keyword.getWebElement(dpage.newMeetFormTitle).getText()).equalsIgnoreCase(" Schedule Meeting ")) {
+	@Then("The meeting schedule form is displayed")
+	public void the_meeting_schedule_form_is_displayed() {
+		if ((Keyword.getWebElement(dpage.newMeetFormTitle).getText()).equalsIgnoreCase(" Schedule Meeting ")) {
 			System.out.println("SCHEDULE MEET--- LAUNCHING SUCCESSFUL");
-		}
-		else {
+		} else {
 			System.out.println("SCHEDULE MEET--- LAUNCHING FAILED");
 		}
 	}
@@ -27,36 +27,37 @@ public class ScheduleMeetingStepdefinition {
 	@Then("The user enters {string} and {string} in the schedule meeting form")
 	public void the_user_enters_and_in_the_schedule_meeting_form(String string, String string2) {
 		Keyword.getWebElement(dpage.topicTextBox).sendKeys("Test Schedule Meet");
-		Keyword.getWebElement(dpage.descriptionTextBox).sendKeys("Here i want to test scenario by scheduling a new meet with automation");
+		Keyword.getWebElement(dpage.descriptionTextBox)
+				.sendKeys("Here i want to test scenario by scheduling a new meet with automation");
 
 	}
 
 	@Then("The user enters {string}")
 	public void the_user_enters(String string) {
-		Keyword.getWebElement(dpage.meetingInviteesTextBox).sendKeys("govind.rudrawar@gmail.com"+",");
+		Keyword.getWebElement(dpage.meetingInviteesTextBox).sendKeys("govind.rudrawar@gmail.com" + ",");
 	}
 
-	//***Note:DTDT = Date,Time,Duration,Timezone
+	// ***Note:DTDT = Date,Time,Duration,Timezone
 	@Then("The user select date,time in hr and mm, duration of meet and timezone from drop down")
 	public void the_user_select_date_time_in_hr_and_mm_duration_of_meet_and_timezone_from_drop_down() {
-		
-			Keyword.selectFromDropDown(dpage.dateTextBox, "SelectByValue","5");
-			Keyword.selectFromDropDown(dpage.monthSelect, "SelectByValue","Sep");
-			Keyword.selectFromDropDown(dpage.yearSelect, "SelectByValue","2020");
-			Keyword.selectFromDropDown(dpage.startHour, "SelectByValue","01");
-			Keyword.selectFromDropDown(dpage.startMinute, "SelectByValue","30");
-			Keyword.selectFromDropDown(dpage.selectAmPm, "SelectByValue","PM");
-			Keyword.selectFromDropDown(dpage.durationHour, "SelectByValue","01");
-			Keyword.selectFromDropDown(dpage.durationMinute, "SelectByValue","30");
-			Keyword.selectFromDropDown(dpage.timeZone, "SelectByValue","(GMT+05:30) Asia/Kolkata");
+
+		Keyword.selectFromDropDown(dpage.dateTextBox, "SelectByValue", "5");
+		Keyword.selectFromDropDown(dpage.monthSelect, "SelectByValue", "Sep");
+		Keyword.selectFromDropDown(dpage.yearSelect, "SelectByValue", "2020");
+		Keyword.selectFromDropDown(dpage.startHour, "SelectByValue", "01");
+		Keyword.selectFromDropDown(dpage.startMinute, "SelectByValue", "30");
+		Keyword.selectFromDropDown(dpage.selectAmPm, "SelectByValue", "PM");
+		Keyword.selectFromDropDown(dpage.durationHour, "SelectByValue", "01");
+		Keyword.selectFromDropDown(dpage.durationMinute, "SelectByValue", "30");
+		Keyword.selectFromDropDown(dpage.timeZone, "SelectByValue", "(GMT+05:30) Asia/Kolkata");
 	}
 
-	//***Note:VCRM=Video,Conference,RecurringMeeting
+	// ***Note:VCRM=Video,Conference,RecurringMeeting
 	@Then("The user select video, conference mode, recurring meeting with slider panel")
 	public void the_user_select_video_conference_mode_recurring_meeting_with_slider_panel() {
-		Keyword.clickOnElement(dpage.videoHostToggleButton);		
-		Keyword.clickOnElement(dpage.videoParticipantsToggleButton);		
-		Keyword.clickOnElement(dpage.isRecurringToggleButton);		
+		Keyword.clickOnElement(dpage.videoHostToggleButton);
+		Keyword.clickOnElement(dpage.videoParticipantsToggleButton);
+		Keyword.clickOnElement(dpage.isRecurringToggleButton);
 	}
 
 	@Then("The user enters intervals of meeting in given text box")

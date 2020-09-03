@@ -31,8 +31,8 @@ public class AccessUtilityFile {
 	public static String getProperty(String key) {
 
 		try {
-			fis = new FileInputStream(
-					"C:\\Eclipse-WorkSpace\\eclipse-workspace\\IJMeetFrameworkBDD\\src\\main\\resources\\ObjectRepository.properties");
+			fis = new FileInputStream("src\\main\\resources\\ObjectRepository.properties");
+//					"C:\\Eclipse-WorkSpace\\eclipse-workspace\\IJMeetFrameworkBDD\\src\\main\\resources\\ObjectRepository.properties");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -56,8 +56,8 @@ public class AccessUtilityFile {
 	public static String[] getLocator(String key ) {
 		String[] parts =null;
 		try {
-			FileInputStream fis = new FileInputStream(
-					"C:\\Eclipse-WorkSpace\\eclipse-workspace\\IJMeetFrameworkBDD\\src\\main\\resources\\ObjectRepository.properties");
+			FileInputStream fis = new FileInputStream("src\\main\\resources\\ObjectRepository.properties");
+//					"C:\\Eclipse-WorkSpace\\eclipse-workspace\\IJMeetFrameworkBDD\\src\\main\\resources\\ObjectRepository.properties");
 			Properties prop = new Properties();
 			prop.load(fis);
 			String values = prop.getProperty(key);

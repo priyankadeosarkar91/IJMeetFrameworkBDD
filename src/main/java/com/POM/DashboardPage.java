@@ -27,10 +27,10 @@ public class DashboardPage extends SignInWithGooglePage {
 	@FindBy(css="span.pro-icons-width>img")
 	public WebElement userdetailsImage;
 	
-	@FindBy(xpath="//button[text()=' Schedule Meeting '] ")
+	@FindBy(css="button.btn.first-btn-warning.btn-rounded.btn-fw.schedule-new-meet-btn") //button[text()=' Schedule Meeting '] ")
 	public WebElement scheduleMeetingButton;
 	
-	@FindBy(xpath=" //button[text()='  Join meeting '] ")
+	@FindBy(xpath="//a[@href='https://ijmeet.com/app']") // //button[text()='  Join meeting '] 
 	public WebElement joinMeetingButton;
 	
 	@FindBy(xpath=" //button[text()=' Quick meeting '] ")

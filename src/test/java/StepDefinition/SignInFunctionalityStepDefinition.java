@@ -86,8 +86,8 @@ public class SignInFunctionalityStepDefinition {
 	@When("The User uses valid Custom Credentials to Log-in into the ijmeet application and clicks on SignIn button")
 	public void the_User_uses_valid_Custom_Credentials_to_Log_in_into_the_ijmeet_application_and_clicks_on_SignIn_button() {
 	    page = new QuickMeetingPage();
-	    Keyword.enterText(page.emailTextBox, "govind.rudrawar@gmail.com");
-	    Keyword.enterText(page.passwordTextBox, "password123");
+	    Keyword.enterText(page.emailTextBox, "priyadeosarkar91@gmail.com");
+	    Keyword.enterText(page.passwordTextBox, "Priyanka$1113");
 	    Keyword.clickOnElement(page.signInbutton);
 	    
 }
